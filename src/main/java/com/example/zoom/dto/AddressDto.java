@@ -1,17 +1,17 @@
-package com.example.zoom.entity;
-
+package com.example.zoom.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+@NoArgsConstructor
+public class AddressDto {
     private String street;
     private String city;
     private String state;
     private String pincode;
+
 
 }

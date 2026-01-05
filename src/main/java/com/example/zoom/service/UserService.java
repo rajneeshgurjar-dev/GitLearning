@@ -2,6 +2,7 @@ package com.example.zoom.service;
 
 import com.example.zoom.dto.UserRequestDto;
 import com.example.zoom.dto.UserResponseDto;
+import com.example.zoom.dto.UserWithOrdersDto;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface UserService {
     UserResponseDto updateUser(String id, UserRequestDto dto);
 
     void deleteUser(String id);
+
+    UserWithOrdersDto getUserWithOrders(String userId);
 }

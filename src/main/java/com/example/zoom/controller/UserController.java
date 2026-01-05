@@ -3,6 +3,7 @@ package com.example.zoom.controller;
 
 import com.example.zoom.dto.UserRequestDto;
 import com.example.zoom.dto.UserResponseDto;
+import com.example.zoom.dto.UserWithOrdersDto;
 import com.example.zoom.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -42,5 +43,10 @@ public class UserController {
     public String delete(@PathVariable String id) {
         userService.deleteUser(id);
         return "User deleted successfully";
+    }
+
+    @GetMapping("/{userId}/with-orders")
+    public UserWithOrdersDto getUserWithOrders(@PathVariable String userId) {
+        return userService.getUserWithOrders(userId);
     }
 }
